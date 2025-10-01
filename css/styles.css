@@ -1,0 +1,193 @@
+/* Certificate Section Animations */
+
+/* Floating animations for background elements */
+@keyframes float {
+    0%, 100% {
+        transform: translateY(0px) translateX(0px);
+    }
+    33% {
+        transform: translateY(-20px) translateX(10px);
+    }
+    66% {
+        transform: translateY(10px) translateX(-10px);
+    }
+}
+
+@keyframes float-delayed {
+    0%, 100% {
+        transform: translateY(0px) translateX(0px);
+    }
+    33% {
+        transform: translateY(15px) translateX(-15px);
+    }
+    66% {
+        transform: translateY(-15px) translateX(15px);
+    }
+}
+
+@keyframes float-slow {
+    0%, 100% {
+        transform: translateY(0px) scale(1);
+    }
+    50% {
+        transform: translateY(-30px) scale(1.1);
+    }
+}
+
+.animate-float {
+    animation: float 8s ease-in-out infinite;
+}
+
+.animate-float-delayed {
+    animation: float-delayed 10s ease-in-out infinite;
+}
+
+.animate-float-slow {
+    animation: float-slow 12s ease-in-out infinite;
+}
+
+/* Fade in animation */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: scale(0.95);
+    }
+    to {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+.animate-fadeIn {
+    animation: fadeIn 0.3s ease-out;
+}
+
+/* Certificate card entrance animations */
+.certificate-card {
+    transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+}
+
+.certificate-card.visible {
+    opacity: 1 !important;
+    transform: translateY(0) !important;
+}
+
+/* Certificate line animations */
+.certificate-line {
+    transition: stroke-dashoffset 1s ease-out;
+}
+
+.certificate-lines.visible .certificate-line {
+    stroke-dashoffset: 0 !important;
+}
+
+/* Header animation */
+.certificate-header {
+    transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+}
+
+.certificate-header.visible {
+    opacity: 1 !important;
+    transform: translateY(0) !important;
+}
+
+/* CTA animation */
+.certificate-cta {
+    transition: opacity 0.8s ease-out 1s;
+}
+
+.certificate-cta.visible {
+    opacity: 1 !important;
+}
+
+/* Modal animations */
+.modal-content {
+    animation: modalSlideIn 0.4s ease-out;
+}
+
+@keyframes modalSlideIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px) scale(0.95);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0) scale(1);
+    }
+}
+
+/* Pulse animation override for Tailwind */
+@keyframes pulse {
+    0%, 100% {
+        opacity: 1;
+        transform: scale(1);
+    }
+    50% {
+        opacity: 0.7;
+        transform: scale(1.05);
+    }
+}
+
+/* Shadow utilities */
+.shadow-3xl {
+    box-shadow: 0 35px 60px -15px rgba(0, 0, 0, 0.3);
+}
+
+/* Mobile card positioning fix */
+@media (max-width: 1024px) {
+    .certificate-card {
+        position: relative !important;
+        transform: none !important;
+        margin-bottom: 2rem;
+    }
+}
+
+/* Floating WhatsApp Button */
+.whatsapp-float {
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    width: 56px;
+    height: 56px;
+    background-color: #000000;
+    color: #ffffff;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+    z-index: 1000;
+    transition: all 0.3s ease;
+    cursor: pointer;
+}
+
+.whatsapp-float:hover {
+    background-color: #333333;
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.25);
+    transform: translateY(-3px);
+}
+
+.whatsapp-float:active {
+    transform: translateY(-1px);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+}
+
+.whatsapp-icon {
+    width: 28px;
+    height: 28px;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .whatsapp-float {
+        width: 50px;
+        height: 50px;
+        bottom: 20px;
+        right: 20px;
+    }
+    
+    .whatsapp-icon {
+        width: 26px;
+        height: 26px;
+    }
+}
