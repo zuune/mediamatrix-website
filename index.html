@@ -7,11 +7,71 @@
     
     <!-- Tailwind CSS -->
     <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        'primary': {
+                            'blue': '#418bfb',
+                            'white': '#f0fafc',
+                            'black': '#000000',
+                        }
+                    }
+                }
+            }
+        }
+    </script>
     
     <!-- Custom Styles -->
     <link rel="stylesheet" href="css/styles.css">
+    <style>
+        /* Custom Color Classes */
+        .bg-primary-white { background-color: #f0fafc !important; }
+        .bg-primary-blue { background-color: #418bfb !important; }
+        .bg-primary-black { background-color: #000000 !important; }
+        .text-primary-white { color: #f0fafc !important; }
+        .text-primary-blue { color: #418bfb !important; }
+        .text-primary-black { color: #000000 !important; }
+        .border-primary-white { border-color: #f0fafc !important; }
+        .border-primary-blue { border-color: #418bfb !important; }
+        .border-primary-black { border-color: #000000 !important; }
+        
+        /* Hover States */
+        .hover\:bg-primary-blue:hover { background-color: #418bfb !important; }
+        .hover\:text-primary-blue:hover { color: #418bfb !important; }
+        .hover\:border-primary-blue:hover { border-color: #418bfb !important; }
+        
+        /* Focus States */
+        .ring-primary-blue { --tw-ring-color: #418bfb !important; }
+        .focus\:ring-primary-blue:focus { --tw-ring-color: #418bfb !important; }
+        
+        /* Opacity Variants */
+        .text-primary-white\/70 { color: rgba(240, 250, 252, 0.7) !important; }
+        .text-primary-white\/80 { color: rgba(240, 250, 252, 0.8) !important; }
+        .text-primary-white\/90 { color: rgba(240, 250, 252, 0.9) !important; }
+        .text-primary-white\/60 { color: rgba(240, 250, 252, 0.6) !important; }
+        
+        .bg-white\/10 { background-color: rgba(255, 255, 255, 0.1) !important; }
+        .bg-white\/20 { background-color: rgba(255, 255, 255, 0.2) !important; }
+        
+        .border-white\/20 { border-color: rgba(255, 255, 255, 0.2) !important; }
+        .border-white\/40 { border-color: rgba(255, 255, 255, 0.4) !important; }
+        .border-primary-blue\/20 { border-color: rgba(65, 139, 251, 0.2) !important; }
+        
+        .text-white\/60 { color: rgba(255, 255, 255, 0.6) !important; }
+        .text-white\/70 { color: rgba(255, 255, 255, 0.7) !important; }
+        .text-white\/80 { color: rgba(255, 255, 255, 0.8) !important; }
+        
+        .hover\:border-white\/40:hover { border-color: rgba(255, 255, 255, 0.4) !important; }
+        .hover\:text-white\/80:hover { color: rgba(255, 255, 255, 0.8) !important; }
+        .group:hover .group-hover\:text-white\/80 { color: rgba(255, 255, 255, 0.8) !important; }
+        
+        /* Gradient Support */
+        .via-primary-blue { --tw-gradient-stops: var(--tw-gradient-from), #418bfb, var(--tw-gradient-to, rgba(65, 139, 251, 0)) !important; }
+    </style>
 </head>
-<body class="bg-white">
+<body class="bg-primary-white">
     
     <!-- Section Containers -->
     <div id="hero-section"></div>

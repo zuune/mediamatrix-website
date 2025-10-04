@@ -28,7 +28,78 @@ document.addEventListener('DOMContentLoaded', async () => {
     // Initialize certificate animations after sections are loaded
     setTimeout(() => {
         initCertificateAnimations();
+        initSmoothScroll();
     }, 100);
+});
+
+// Smooth Scroll Function
+function initSmoothScroll() {
+    // Get all smooth scroll links
+    const smoothScrollLinks = document.querySelectorAll('a[href^="#"]');
+    
+    smoothScrollLinks.forEach(link => {
+        link.addEventListener('click', function(e) {
+            const href = this.getAttribute('href');
+            
+            // Skip if it's just "#" or empty
+            if (!href || href === '#') return;
+            
+            e.preventDefault();
+            
+            const targetId = href.substring(1);
+            const targetElement = document.getElementById(targetId);
+            
+            if (targetElement) {
+                // Calculate offset for fixed header (if any)
+                const headerOffset = 80; // Adjust this value based on your header height
+                const elementPosition = targetElement.getBoundingClientRect().top;
+                const offsetPosition = elementPosition + window.pageYOffset - headerOffset;
+                
+                // Smooth scroll to target
+                window.scrollTo({
+                    top: offsetPosition,
+                    behavior: 'smooth'
+                });
+                
+                // Update active state in navigation
+                updateActiveNavLink(href);
+            }
+        });
+    });
+}
+
+// Update active navigation link
+function updateActiveNavLink(activeHref) {
+    const navLinks = document.querySelectorAll('.smooth-scroll');
+    navLinks.forEach(link => {
+        if (link.getAttribute('href') === activeHref) {
+            link.classList.remove('text-gray-500');
+            link.classList.add('text-gray-900', 'font-medium');
+        } else {
+            link.classList.remove('text-gray-900', 'font-medium');
+            link.classList.add('text-gray-500');
+        }
+    });
+}
+
+// Highlight active section on scroll
+window.addEventListener('scroll', () => {
+    const sections = ['hero', 'optimize', 'about', 'clients', 'results', 'certificate', 'contact'];
+    let currentSection = '';
+    
+    sections.forEach(section => {
+        const element = document.getElementById(`${section}-section`);
+        if (element) {
+            const rect = element.getBoundingClientRect();
+            if (rect.top <= 150 && rect.bottom >= 150) {
+                currentSection = `#${section}-section`;
+            }
+        }
+    });
+    
+    if (currentSection) {
+        updateActiveNavLink(currentSection);
+    }
 });
 
 // Copy email function

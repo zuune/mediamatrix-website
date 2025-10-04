@@ -149,21 +149,21 @@
     right: 30px;
     width: 56px;
     height: 56px;
-    background-color: #000000;
+    background-color: #418bfb;
     color: #ffffff;
     border-radius: 50%;
     display: flex;
     align-items: center;
     justify-content: center;
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+    box-shadow: 0 4px 12px rgba(65, 139, 251, 0.3);
     z-index: 1000;
     transition: all 0.3s ease;
     cursor: pointer;
 }
 
 .whatsapp-float:hover {
-    background-color: #333333;
-    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.25);
+    background-color: #2a75e8;
+    box-shadow: 0 6px 20px rgba(65, 139, 251, 0.4);
     transform: translateY(-3px);
 }
 
