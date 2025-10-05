@@ -20,22 +20,75 @@
     <div class="absolute bottom-40 left-20 w-24 h-24 border border-gray-200 opacity-30 hidden lg:block transform rotate-45"></div>
     
     <!-- Top Navigation Bar -->
-    <div class="relative z-20 w-full px-8 md:px-16 lg:px-24 py-6 border-b border-gray-100">
+    <div class="relative z-20 w-full px-4 sm:px-8 md:px-16 lg:px-24 py-6 border-b border-gray-100">
         <div class="flex items-center justify-between">
-            <!-- Left Navigation -->
-            <div class="flex items-center gap-8">
-                <a href="#hero-section" class="text-sm text-gray-900 font-medium hover:text-primary-blue transition-colors relative after:absolute after:bottom-0 after:left-0 after:w-0 after:h-[1px] after:bg-primary-blue after:transition-all hover:after:w-full smooth-scroll">Home</a>
-                <a href="#optimize-section" class="text-sm text-gray-500 hover:text-primary-blue transition-colors relative after:absolute after:bottom-0 after:left-0 after:w-0 after:h-[1px] after:bg-primary-blue after:transition-all hover:after:w-full smooth-scroll">Services</a>
-                <a href="#about-section" class="text-sm text-gray-500 hover:text-primary-blue transition-colors relative after:absolute after:bottom-0 after:left-0 after:w-0 after:h-[1px] after:bg-primary-blue after:transition-all hover:after:w-full smooth-scroll">About</a>
-                <a href="#results-section" class="text-sm text-gray-500 hover:text-primary-blue transition-colors relative after:absolute after:bottom-0 after:left-0 after:w-0 after:h-[1px] after:bg-primary-blue after:transition-all hover:after:w-full smooth-scroll">Portfolio</a>
-                <a href="#contact-section" class="text-sm text-gray-500 hover:text-primary-blue transition-colors relative after:absolute after:bottom-0 after:left-0 after:w-0 after:h-[1px] after:bg-primary-blue after:transition-all hover:after:w-full smooth-scroll">Contact</a>
+            <!-- Left: Logo/Brand (mobile) or Desktop Navigation -->
+            <div class="flex items-center">
+                <!-- Mobile Logo -->
+                <span class="text-lg font-semibold text-gray-900 md:hidden">MM</span>
+                
+                <!-- Desktop Navigation -->
+                <div class="hidden md:flex items-center gap-8">
+                    <a href="#hero-section" class="text-sm text-gray-900 font-medium hover:text-primary-blue transition-colors relative after:absolute after:bottom-0 after:left-0 after:w-0 after:h-[1px] after:bg-primary-blue after:transition-all hover:after:w-full smooth-scroll">Home</a>
+                    <a href="#optimize-section" class="text-sm text-gray-500 hover:text-primary-blue transition-colors relative after:absolute after:bottom-0 after:left-0 after:w-0 after:h-[1px] after:bg-primary-blue after:transition-all hover:after:w-full smooth-scroll">Services</a>
+                    <a href="#about-section" class="text-sm text-gray-500 hover:text-primary-blue transition-colors relative after:absolute after:bottom-0 after:left-0 after:w-0 after:h-[1px] after:bg-primary-blue after:transition-all hover:after:w-full smooth-scroll">About</a>
+                    <a href="#results-section" class="text-sm text-gray-500 hover:text-primary-blue transition-colors relative after:absolute after:bottom-0 after:left-0 after:w-0 after:h-[1px] after:bg-primary-blue after:transition-all hover:after:w-full smooth-scroll">Portfolio</a>
+                    <a href="#contact-section" class="text-sm text-gray-500 hover:text-primary-blue transition-colors relative after:absolute after:bottom-0 after:left-0 after:w-0 after:h-[1px] after:bg-primary-blue after:transition-all hover:after:w-full smooth-scroll">Contact</a>
+                </div>
             </div>
             
-            <!-- Right Navigation -->
-            <div class="flex items-center gap-3 text-xs">
-                <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer" class="text-gray-500 hover:text-primary-blue transition-colors">LinkedIn</a>
-                <span class="text-gray-300">|</span>
-                <a href="https://instagram.com" target="_blank" rel="noopener noreferrer" class="text-gray-500 hover:text-primary-blue transition-colors">Instagram</a>
+            <!-- Right: Social Links (desktop) or Mobile Menu Button -->
+            <div class="flex items-center">
+                <!-- Desktop Social Links -->
+                <div class="hidden md:flex items-center gap-3 text-xs">
+                    <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer" class="text-gray-500 hover:text-primary-blue transition-colors">LinkedIn</a>
+                    <span class="text-gray-300">|</span>
+                    <a href="https://instagram.com" target="_blank" rel="noopener noreferrer" class="text-gray-500 hover:text-primary-blue transition-colors">Instagram</a>
+                </div>
+                
+                <!-- Mobile Menu Button -->
+                <button id="mobile-menu-toggle" class="md:hidden p-2 text-gray-600 hover:text-primary-blue transition-colors focus:outline-none" aria-label="Toggle menu">
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path id="menu-icon" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/>
+                        <path id="close-icon" class="hidden" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"/>
+                    </svg>
+                </button>
+            </div>
+        </div>
+    </div>
+    
+    <!-- Mobile Menu Panel -->
+    <div id="mobile-menu" class="fixed inset-0 z-50 md:hidden hidden">
+        <!-- Backdrop -->
+        <div class="absolute inset-0 bg-black/50 backdrop-blur-sm" id="mobile-menu-backdrop"></div>
+        
+        <!-- Menu Panel -->
+        <div class="absolute top-0 right-0 h-full w-80 max-w-[85vw] bg-white shadow-2xl transform transition-transform duration-300">
+            <!-- Menu Header -->
+            <div class="flex items-center justify-between px-6 py-6 border-b border-gray-100">
+                <button id="mobile-menu-close" class="p-2 text-gray-600 hover:text-primary-blue transition-colors" aria-label="Close menu">
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"/>
+                    </svg>
+                </button>
+            </div>
+            
+            <!-- Menu Items -->
+            <nav class="px-6 py-8 space-y-6">
+                <a href="#hero-section" class="mobile-menu-link block text-lg text-gray-900 font-medium hover:text-primary-blue transition-colors smooth-scroll">Home</a>
+                <a href="#optimize-section" class="mobile-menu-link block text-lg text-gray-600 hover:text-primary-blue transition-colors smooth-scroll">Services</a>
+                <a href="#about-section" class="mobile-menu-link block text-lg text-gray-600 hover:text-primary-blue transition-colors smooth-scroll">About</a>
+                <a href="#results-section" class="mobile-menu-link block text-lg text-gray-600 hover:text-primary-blue transition-colors smooth-scroll">Portfolio</a>
+                <a href="#contact-section" class="mobile-menu-link block text-lg text-gray-600 hover:text-primary-blue transition-colors smooth-scroll">Contact</a>
+            </nav>
+            
+            <!-- Social Links -->
+            <div class="absolute bottom-0 left-0 right-0 px-6 py-8 border-t border-gray-100">
+                <div class="flex items-center gap-6">
+                    <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer" class="text-sm text-gray-500 hover:text-primary-blue transition-colors">LinkedIn</a>
+                    <span class="text-gray-300">|</span>
+                    <a href="https://instagram.com" target="_blank" rel="noopener noreferrer" class="text-sm text-gray-500 hover:text-primary-blue transition-colors">Instagram</a>
+                </div>
             </div>
         </div>
     </div>
@@ -47,7 +100,7 @@
             <!-- Left Side Email -->
             <div class="absolute -left-12 top-1/2 -translate-y-1/2 hidden xl:block">
                 <a href="mailto:www.valktive.com" class="text-[10px] tracking-widest text-gray-400 hover:text-black transition-colors -rotate-90 inline-block origin-center whitespace-nowrap uppercase">
-                    www.vakltive.com
+                    www.mediamatrix.website
                 </a>
             </div>
             
