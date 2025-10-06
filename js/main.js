@@ -29,7 +29,6 @@ document.addEventListener('DOMContentLoaded', async () => {
     setTimeout(() => {
         initCertificateAnimations();
         initSmoothScroll();
-        initMobileMenu();
     }, 100);
 });
 
@@ -242,75 +241,4 @@ document.addEventListener('click', (e) => {
         closeCertificateModal();
     }
 });
-
-// Mobile Menu Functions
-function initMobileMenu() {
-    const menuToggle = document.getElementById('mobile-menu-toggle');
-    const mobileMenu = document.getElementById('mobile-menu');
-    const menuClose = document.getElementById('mobile-menu-close');
-    const menuBackdrop = document.getElementById('mobile-menu-backdrop');
-    const mobileMenuLinks = document.querySelectorAll('.mobile-menu-link');
-
-    if (!menuToggle || !mobileMenu) return;
-
-    // Open mobile menu
-    function openMobileMenu() {
-        mobileMenu.classList.remove('hidden');
-        document.body.style.overflow = 'hidden';
-        
-        // Animate menu panel in
-        setTimeout(() => {
-            const panel = mobileMenu.querySelector('.absolute.top-0.right-0');
-            if (panel) {
-                panel.style.transform = 'translateX(0)';
-            }
-        }, 10);
-    }
-
-    // Close mobile menu
-    function closeMobileMenu() {
-        const panel = mobileMenu.querySelector('.absolute.top-0.right-0');
-        if (panel) {
-            panel.style.transform = 'translateX(100%)';
-        }
-        
-        setTimeout(() => {
-            mobileMenu.classList.add('hidden');
-            document.body.style.overflow = '';
-        }, 300);
-    }
-
-    // Toggle button click
-    menuToggle.addEventListener('click', openMobileMenu);
-
-    // Close button click
-    if (menuClose) {
-        menuClose.addEventListener('click', closeMobileMenu);
-    }
-
-    // Backdrop click
-    if (menuBackdrop) {
-        menuBackdrop.addEventListener('click', closeMobileMenu);
-    }
-
-    // Close menu when clicking on a link
-    mobileMenuLinks.forEach(link => {
-        link.addEventListener('click', () => {
-            closeMobileMenu();
-        });
-    });
-
-    // Close menu on escape key
-    document.addEventListener('keydown', (e) => {
-        if (e.key === 'Escape' && !mobileMenu.classList.contains('hidden')) {
-            closeMobileMenu();
-        }
-    });
-
-    // Initial state - ensure panel is off-screen
-    const panel = mobileMenu.querySelector('.absolute.top-0.right-0');
-    if (panel) {
-        panel.style.transform = 'translateX(100%)';
-    }
-}
 
