@@ -22,13 +22,13 @@
     <!-- Top Navigation Bar -->
     <div class="relative z-20 w-full border-b border-gray-100">
         <!-- Desktop Navigation -->
-        <div class="hidden md:flex items-center justify-between px-8 md:px-16 lg:px-24 py-6">
-            <!-- Left: Navigation Links -->
+        <div class="hidden md:flex items-center justify-between px-8 md:px-16 lg:px-24 py-3">
+            <!-- Left: Logo and Navigation Links -->
             <div class="flex items-center gap-8">
+                <a href="#hero-section" class="flex items-center smooth-scroll">
+                    <img src="assets/logo_mediamatrix.png" alt="Media Matrix" class="h-12 pt-1 w-auto">
+                </a>
                 <a href="#hero-section" class="text-sm text-gray-900 font-medium hover:text-primary-blue transition-colors relative after:absolute after:bottom-0 after:left-0 after:w-0 after:h-[1px] after:bg-primary-blue after:transition-all hover:after:w-full smooth-scroll">Home</a>
-                <a href="#optimize-section" class="text-sm text-gray-500 hover:text-primary-blue transition-colors relative after:absolute after:bottom-0 after:left-0 after:w-0 after:h-[1px] after:bg-primary-blue after:transition-all hover:after:w-full smooth-scroll">Services</a>
-                <a href="#about-section" class="text-sm text-gray-500 hover:text-primary-blue transition-colors relative after:absolute after:bottom-0 after:left-0 after:w-0 after:h-[1px] after:bg-primary-blue after:transition-all hover:after:w-full smooth-scroll">About</a>
-                <a href="#results-section" class="text-sm text-gray-500 hover:text-primary-blue transition-colors relative after:absolute after:bottom-0 after:left-0 after:w-0 after:h-[1px] after:bg-primary-blue after:transition-all hover:after:w-full smooth-scroll">Portfolio</a>
                 <a href="#contact-section" class="text-sm text-gray-500 hover:text-primary-blue transition-colors relative after:absolute after:bottom-0 after:left-0 after:w-0 after:h-[1px] after:bg-primary-blue after:transition-all hover:after:w-full smooth-scroll">Contact</a>
             </div>
             
@@ -40,17 +40,19 @@
             </div>
         </div>
         
-        <!-- Mobile Scrollable Navigation -->
-        <div class="md:hidden overflow-x-auto scrollbar-hide py-4 px-4">
+        <!-- Mobile Navigation -->
+        <div class="md:hidden overflow-x-auto py-4 px-4">
             <div class="flex items-center gap-6 min-w-max">
+                <a href="#hero-section" class="flex items-center smooth-scroll">
+                    <img src="assets/logo_mediamatrix.png" alt="Media Matrix" class="h-8 w-auto">
+                </a>
                 <a href="#hero-section" class="text-sm text-gray-900 font-medium hover:text-primary-blue transition-colors whitespace-nowrap smooth-scroll">Home</a>
-                <a href="#optimize-section" class="text-sm text-gray-500 hover:text-primary-blue transition-colors whitespace-nowrap smooth-scroll">Services</a>
-                <a href="#about-section" class="text-sm text-gray-500 hover:text-primary-blue transition-colors whitespace-nowrap smooth-scroll">About</a>
-                <a href="#results-section" class="text-sm text-gray-500 hover:text-primary-blue transition-colors whitespace-nowrap smooth-scroll">Portfolio</a>
                 <a href="#contact-section" class="text-sm text-gray-500 hover:text-primary-blue transition-colors whitespace-nowrap smooth-scroll">Contact</a>
-                <span class="text-gray-300">|</span>
-                <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer" class="text-sm text-gray-500 hover:text-primary-blue transition-colors whitespace-nowrap">LinkedIn</a>
-                <a href="https://instagram.com" target="_blank" rel="noopener noreferrer" class="text-sm text-gray-500 hover:text-primary-blue transition-colors whitespace-nowrap">Instagram</a>
+                <div class="flex items-center gap-3 ml-auto">
+                    <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer" class="text-sm text-gray-500 hover:text-primary-blue transition-colors whitespace-nowrap">LinkedIn</a>
+                    <span class="text-gray-300">|</span>
+                    <a href="https://instagram.com" target="_blank" rel="noopener noreferrer" class="text-sm text-gray-500 hover:text-primary-blue transition-colors whitespace-nowrap">Instagram</a>
+                </div>
             </div>
         </div>
     </div>
@@ -76,14 +78,6 @@
             <!-- Central Hero Content with Cards -->
             <div class="text-center space-y-12 relative z-10">
                 
-                <!-- Top Label Badge -->
-                <div class="flex justify-center">
-                    <div class="inline-flex items-center gap-2 px-4 py-2 border border-primary-blue rounded-full bg-white/50 backdrop-blur-sm">
-                        <div class="w-2 h-2 bg-primary-blue rounded-full animate-pulse"></div>
-                        <span class="text-xs tracking-wide text-gray-700 uppercase">Available for work</span>
-                    </div>
-                </div>
-                
                 <!-- Main Headline with Accent -->
                 <div class="relative">
                     <h1 class="text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-light tracking-tight leading-[1.15] text-black">
@@ -103,31 +97,31 @@
                 </p>
                 
                 <!-- Stats Cards -->
-                <div class="grid grid-cols-1 md:grid-cols-3 gap-6 max-w-3xl mx-auto pt-12">
+                <div class="grid grid-cols-3 md:grid-cols-3 gap-3 md:gap-6 max-w-3xl mx-auto pt-12">
                     <!-- Card 1 -->
-                    <div class="group relative bg-white border border-gray-200 rounded-2xl p-6 hover:border-gray-400 transition-all duration-300">
-                        <div class="absolute top-4 right-4 w-8 h-8 border border-gray-200 rounded-full opacity-0 group-hover:opacity-100 transition-opacity"></div>
-                        <div class="text-left space-y-2">
-                            <div class="text-3xl font-light text-black">2+</div>
-                            <div class="text-xs uppercase tracking-wider text-gray-500">Years Experience</div>
+                    <div class="group relative bg-white border border-gray-200 rounded-xl md:rounded-2xl p-3 md:p-6 hover:border-gray-400 transition-all duration-300">
+                        <div class="absolute top-2 right-2 md:top-4 md:right-4 w-6 h-6 md:w-8 md:h-8 border border-gray-200 rounded-full opacity-0 group-hover:opacity-100 transition-opacity"></div>
+                        <div class="text-left space-y-1 md:space-y-2">
+                            <div class="text-xl md:text-3xl font-light text-black">2+</div>
+                            <div class="text-[9px] md:text-xs uppercase tracking-wider text-gray-500">Years Experience</div>
                         </div>
                     </div>
                     
                     <!-- Card 2 -->
-                    <div class="group relative bg-primary-blue text-white border border-primary-blue rounded-2xl p-6 hover:opacity-90 transition-all duration-300">
-                        <div class="absolute top-4 right-4 w-8 h-8 border border-white/20 rounded-full opacity-0 group-hover:opacity-100 transition-opacity"></div>
-                        <div class="text-left space-y-2">
-                            <div class="text-3xl font-light">120+</div>
-                            <div class="text-xs uppercase tracking-wider text-primary-white">Projects Done</div>
+                    <div class="group relative bg-primary-blue text-white border border-primary-blue rounded-xl md:rounded-2xl p-3 md:p-6 hover:opacity-90 transition-all duration-300">
+                        <div class="absolute top-2 right-2 md:top-4 md:right-4 w-6 h-6 md:w-8 md:h-8 border border-white/20 rounded-full opacity-0 group-hover:opacity-100 transition-opacity"></div>
+                        <div class="text-left space-y-1 md:space-y-2">
+                            <div class="text-xl md:text-3xl font-light">120+</div>
+                            <div class="text-[9px] md:text-xs uppercase tracking-wider text-primary-white">Projects Done</div>
                         </div>
                     </div>
                     
                     <!-- Card 3 -->
-                    <div class="group relative bg-white border border-gray-200 rounded-2xl p-6 hover:border-gray-400 transition-all duration-300">
-                        <div class="absolute top-4 right-4 w-8 h-8 border border-gray-200 rounded-full opacity-0 group-hover:opacity-100 transition-opacity"></div>
-                        <div class="text-left space-y-2">
-                            <div class="text-3xl font-light text-black">50+</div>
-                            <div class="text-xs uppercase tracking-wider text-gray-500">Brand Partners</div>
+                    <div class="group relative bg-white border border-gray-200 rounded-xl md:rounded-2xl p-3 md:p-6 hover:border-gray-400 transition-all duration-300">
+                        <div class="absolute top-2 right-2 md:top-4 md:right-4 w-6 h-6 md:w-8 md:h-8 border border-gray-200 rounded-full opacity-0 group-hover:opacity-100 transition-opacity"></div>
+                        <div class="text-left space-y-1 md:space-y-2">
+                            <div class="text-xl md:text-3xl font-light text-black">50+</div>
+                            <div class="text-[9px] md:text-xs uppercase tracking-wider text-gray-500">Brand Partners</div>
                         </div>
                     </div>
                 </div>
