@@ -1,7 +1,5 @@
-// Function to load HTML sections dynamically
 async function loadSection(sectionName, containerId) {
     try {
-        // Add cache busting parameter
         const timestamp = new Date().getTime();
         const response = await fetch(`sections/${sectionName}.html?v=${timestamp}`);
         if (!response.ok) throw new Error(`Failed to load ${sectionName}`);
@@ -25,23 +23,19 @@ document.addEventListener('DOMContentLoaded', async () => {
         loadSection('contact', 'contact-section')
     ]);
     
-    // Initialize certificate animations after sections are loaded
     setTimeout(() => {
         initCertificateAnimations();
         initSmoothScroll();
     }, 100);
 });
 
-// Smooth Scroll Function
 function initSmoothScroll() {
-    // Get all smooth scroll links
     const smoothScrollLinks = document.querySelectorAll('a[href^="#"]');
     
     smoothScrollLinks.forEach(link => {
         link.addEventListener('click', function(e) {
             const href = this.getAttribute('href');
             
-            // Skip if it's just "#" or empty
             if (!href || href === '#') return;
             
             e.preventDefault();
@@ -50,25 +44,21 @@ function initSmoothScroll() {
             const targetElement = document.getElementById(targetId);
             
             if (targetElement) {
-                // Calculate offset for fixed header (if any)
-                const headerOffset = 80; // Adjust this value based on your header height
+                const headerOffset = 80;
                 const elementPosition = targetElement.getBoundingClientRect().top;
                 const offsetPosition = elementPosition + window.pageYOffset - headerOffset;
                 
-                // Smooth scroll to target
                 window.scrollTo({
                     top: offsetPosition,
                     behavior: 'smooth'
                 });
                 
-                // Update active state in navigation
                 updateActiveNavLink(href);
             }
         });
     });
 }
 
-// Update active navigation link
 function updateActiveNavLink(activeHref) {
     const navLinks = document.querySelectorAll('.smooth-scroll');
     navLinks.forEach(link => {
@@ -82,7 +72,6 @@ function updateActiveNavLink(activeHref) {
     });
 }
 
-// Highlight active section on scroll
 window.addEventListener('scroll', () => {
     const sections = ['hero', 'optimize', 'about', 'clients', 'results', 'certificate', 'contact'];
     let currentSection = '';
@@ -102,11 +91,9 @@ window.addEventListener('scroll', () => {
     }
 });
 
-// Copy email function
 function copyEmail() {
     const email = 'transerydesign@gmail.com';
     navigator.clipboard.writeText(email).then(() => {
-        // Elegant toast notification
         const toast = document.createElement('div');
         toast.textContent = 'Email copied to clipboard';
         toast.style.cssText = 'position: fixed; bottom: 30px; left: 50%; transform: translateX(-50%); background: #000; color: #fff; padding: 12px 24px; border-radius: 50px; font-size: 14px; z-index: 1000; animation: fadeInUp 0.3s ease-out;';
@@ -121,9 +108,7 @@ function copyEmail() {
     });
 }
 
-// Certificate Section Animations
 function initCertificateAnimations() {
-    // Intersection Observer for scroll animations
     const observerOptions = {
         threshold: 0.1,
         rootMargin: '0px 0px -50px 0px'
@@ -137,7 +122,6 @@ function initCertificateAnimations() {
         });
     }, observerOptions);
 
-    // Observe certificate section elements
     const certificateHeader = document.querySelector('.certificate-header');
     const certificateCards = document.querySelectorAll('.certificate-card');
     const certificateLines = document.querySelector('.certificate-lines');
@@ -147,7 +131,6 @@ function initCertificateAnimations() {
     if (certificateLines) observer.observe(certificateLines);
     if (certificateCta) observer.observe(certificateCta);
 
-    // Observe cards with staggered animation
     certificateCards.forEach((card, index) => {
         card.style.transitionDelay = `${index * 0.15}s`;
         observer.observe(card);
