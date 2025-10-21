@@ -1,19 +1,35 @@
-<section class="relative bg-primary-white text-black w-full min-h-screen flex flex-col overflow-hidden">
+<section class="relative bg-primary-white text-black w-full min-h-screen flex flex-col overflow-hidden floating-elements">
     
+    <!-- Enhanced Background Patterns -->
     <div class="absolute inset-0 opacity-[0.03]">
-        <div class="absolute inset-0" style="background-image: repeating-linear-gradient(0deg, #000 0px, #000 1px, transparent 1px, transparent 40px), repeating-linear-gradient(90deg, #000 0px, #000 1px, transparent 1px, transparent 40px);"></div>
+        <div class="absolute inset-0 pattern-grid"></div>
     </div>
     
+    <!-- Animated Floating Elements -->
     <div class="absolute inset-0 opacity-[0.05]">
-        <div class="absolute top-20 left-20 w-2 h-2 bg-black rounded-full"></div>
-        <div class="absolute top-40 right-32 w-2 h-2 bg-black rounded-full"></div>
-        <div class="absolute bottom-32 left-40 w-2 h-2 bg-black rounded-full"></div>
-        <div class="absolute top-60 right-60 w-1.5 h-1.5 bg-black rounded-full"></div>
-        <div class="absolute bottom-60 right-40 w-1.5 h-1.5 bg-black rounded-full"></div>
+        <div class="absolute top-20 left-20 w-2 h-2 bg-primary-blue rounded-full animate-float"></div>
+        <div class="absolute top-40 right-32 w-2 h-2 bg-primary-blue rounded-full animate-float-delayed"></div>
+        <div class="absolute bottom-32 left-40 w-2 h-2 bg-primary-blue rounded-full animate-float-slow"></div>
+        <div class="absolute top-60 right-60 w-1.5 h-1.5 bg-primary-blue rounded-full animate-float"></div>
+        <div class="absolute bottom-60 right-40 w-1.5 h-1.5 bg-primary-blue rounded-full animate-float-delayed"></div>
+        
+        <!-- Additional floating elements -->
+        <div class="absolute top-32 left-1/2 w-1 h-1 bg-primary-blue rounded-full animate-float-slow"></div>
+        <div class="absolute bottom-20 right-1/3 w-1.5 h-1.5 bg-primary-blue rounded-full animate-float"></div>
+        <div class="absolute top-1/2 left-10 w-1 h-1 bg-primary-blue rounded-full animate-float-delayed"></div>
     </div>
     
-    <div class="absolute top-20 right-20 w-32 h-32 border border-gray-200 rounded-full opacity-40 hidden lg:block"></div>
-    <div class="absolute bottom-40 left-20 w-24 h-24 border border-gray-200 opacity-30 hidden lg:block transform rotate-45"></div>
+    <!-- Enhanced Geometric Shapes -->
+    <div class="absolute top-20 right-20 w-32 h-32 border border-primary-blue/20 rounded-full opacity-40 hidden lg:block animate-float-slow"></div>
+    <div class="absolute bottom-40 left-20 w-24 h-24 border border-primary-blue/20 opacity-30 hidden lg:block transform rotate-45 animate-float"></div>
+    
+    <!-- New Floating Shapes -->
+    <div class="absolute top-1/3 right-1/4 w-16 h-16 border border-primary-blue/10 rounded-full opacity-30 hidden lg:block animate-float-delayed"></div>
+    <div class="absolute bottom-1/3 left-1/4 w-20 h-20 border border-primary-blue/15 opacity-25 hidden lg:block transform rotate-12 animate-float"></div>
+    
+    <!-- Gradient Orbs -->
+    <div class="absolute top-1/4 left-1/3 w-40 h-40 bg-gradient-to-br from-primary-blue/5 to-transparent rounded-full blur-xl animate-float-slow hidden lg:block"></div>
+    <div class="absolute bottom-1/4 right-1/3 w-32 h-32 bg-gradient-to-tl from-primary-blue/8 to-transparent rounded-full blur-lg animate-float-delayed hidden lg:block"></div>
     
     <div class="relative z-20 w-full border-b border-gray-100">
         <div class="hidden md:flex items-center justify-between px-8 md:px-16 lg:px-24 py-3">
@@ -21,11 +37,15 @@
                 <a href="#hero-section" class="flex items-center smooth-scroll">
                     <img src="assets/logo_mediamatrix.png" alt="Media Matrix" class="h-12 pt-1 w-auto">
                 </a>
-                <a href="#hero-section" class="text-sm text-gray-900 font-medium hover:text-primary-blue transition-colors relative after:absolute after:bottom-0 after:left-0 after:w-0 after:h-[1px] after:bg-primary-blue after:transition-all hover:after:w-full smooth-scroll">Home</a>
-                <a href="#contact-section" class="text-sm text-gray-500 hover:text-primary-blue transition-colors relative after:absolute after:bottom-0 after:left-0 after:w-0 after:h-[1px] after:bg-primary-blue after:transition-all hover:after:w-full smooth-scroll">Contact</a>
+                <a href="#hero-section" class="text-sm text-gray-900 font-medium hover:text-primary-blue transition-colors relative after:absolute after:bottom-0 after:left-0 after:w-0 after:h-[1px] after:bg-primary-blue after:transition-all hover:after:w-full smooth-scroll" data-lang="id">Beranda</a>
+                <a href="#hero-section" class="text-sm text-gray-900 font-medium hover:text-primary-blue transition-colors relative after:absolute after:bottom-0 after:left-0 after:w-0 after:h-[1px] after:bg-primary-blue after:transition-all hover:after:w-full smooth-scroll hidden" data-lang="en">Home</a>
+                <a href="#contact-section" class="text-sm text-gray-500 hover:text-primary-blue transition-colors relative after:absolute after:bottom-0 after:left-0 after:w-0 after:h-[1px] after:bg-primary-blue after:transition-all hover:after:w-full smooth-scroll" data-lang="id">Kontak</a>
+                <a href="#contact-section" class="text-sm text-gray-500 hover:text-primary-blue transition-colors relative after:absolute after:bottom-0 after:left-0 after:w-0 after:h-[1px] after:bg-primary-blue after:transition-all hover:after:w-full smooth-scroll hidden" data-lang="en">Contact</a>
             </div>
             
             <div class="flex items-center gap-3 text-xs">
+                <button id="lang-switcher" class="text-gray-500 hover:text-primary-blue transition-colors cursor-pointer">EN</button>
+                <span class="text-gray-300">|</span>
                 <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer" class="text-gray-500 hover:text-primary-blue transition-colors">LinkedIn</a>
                 <span class="text-gray-300">|</span>
                 <a href="https://instagram.com" target="_blank" rel="noopener noreferrer" class="text-gray-500 hover:text-primary-blue transition-colors">Instagram</a>
@@ -37,9 +57,13 @@
                 <a href="#hero-section" class="flex items-center smooth-scroll">
                     <img src="assets/logo_mediamatrix.png" alt="Media Matrix" class="h-8 w-auto">
                 </a>
-                <a href="#hero-section" class="text-sm text-gray-900 font-medium hover:text-primary-blue transition-colors whitespace-nowrap smooth-scroll">Home</a>
-                <a href="#contact-section" class="text-sm text-gray-500 hover:text-primary-blue transition-colors whitespace-nowrap smooth-scroll">Contact</a>
+                <a href="#hero-section" class="text-sm text-gray-900 font-medium hover:text-primary-blue transition-colors whitespace-nowrap smooth-scroll" data-lang="id">Beranda</a>
+                <a href="#hero-section" class="text-sm text-gray-900 font-medium hover:text-primary-blue transition-colors whitespace-nowrap smooth-scroll hidden" data-lang="en">Home</a>
+                <a href="#contact-section" class="text-sm text-gray-500 hover:text-primary-blue transition-colors whitespace-nowrap smooth-scroll" data-lang="id">Kontak</a>
+                <a href="#contact-section" class="text-sm text-gray-500 hover:text-primary-blue transition-colors whitespace-nowrap smooth-scroll hidden" data-lang="en">Contact</a>
                 <div class="flex items-center gap-3 ml-auto">
+                    <button id="lang-switcher-mobile" class="text-sm text-gray-500 hover:text-primary-blue transition-colors whitespace-nowrap cursor-pointer">EN</button>
+                    <span class="text-gray-300">|</span>
                     <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer" class="text-sm text-gray-500 hover:text-primary-blue transition-colors whitespace-nowrap">LinkedIn</a>
                     <span class="text-gray-300">|</span>
                     <a href="https://instagram.com" target="_blank" rel="noopener noreferrer" class="text-sm text-gray-500 hover:text-primary-blue transition-colors whitespace-nowrap">Instagram</a>
@@ -58,58 +82,94 @@
             </div>
             
             <div class="absolute -right-12 top-1/2 -translate-y-1/2 hidden xl:block">
-                <div class="text-[10px] tracking-widest text-gray-400 rotate-90 inline-block origin-center whitespace-nowrap uppercase">
+                <div class="text-[10px] tracking-widest text-gray-400 rotate-90 inline-block origin-center whitespace-nowrap uppercase" data-lang="id">
+                    Hasil Nyata
+                </div>
+                <div class="text-[10px] tracking-widest text-gray-400 rotate-90 inline-block origin-center whitespace-nowrap uppercase hidden" data-lang="en">
                     Creating Unexpected
                 </div>
             </div>
             
-            <div class="text-center space-y-12 relative z-10">
+            <div class="text-center space-y-12 relative z-10 stagger-animation">
                 
                 <div class="relative">
-                    <h1 class="text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-light tracking-tight leading-[1.15] text-black">
-                        Creating <span class="relative inline-block">
+                    <h1 class="text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-light tracking-tight leading-[1.15] text-black text-shadow" data-lang="id">
+                        Percuma Kalau Banyak Klik,<br>
+                        <span class="relative inline-block gradient-text">
+                            Tapi Tidak Convert!
+                            <div class="absolute -bottom-2 left-0 w-full h-[2px] bg-gradient-to-r from-transparent via-primary-blue to-transparent animate-gradient-shift"></div>
+                        </span><br>
+                        <span class="font-normal gradient-text">Winning Framework terbukti efektif pada 50+ clients</span>
+                    </h1>
+                    <h1 class="text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-light tracking-tight leading-[1.15] text-black text-shadow hidden" data-lang="en">
+                        Creating <span class="relative inline-block gradient-text">
                             powerful
-                            <div class="absolute -bottom-2 left-0 w-full h-[2px] bg-gradient-to-r from-transparent via-primary-blue to-transparent"></div>
+                            <div class="absolute -bottom-2 left-0 w-full h-[2px] bg-gradient-to-r from-transparent via-primary-blue to-transparent animate-gradient-shift"></div>
                         </span><br>
                         digital advertising that drive<br>
-                        <span class="font-normal">real results.</span>
+                        <span class="font-normal gradient-text">real results.</span>
                     </h1>
                 </div>
                 
-                <p class="text-base md:text-lg text-gray-500 max-w-2xl mx-auto leading-relaxed">
-                    We are a digital marketing agency focused on real results not just impressions or clicks. We help your business grow through proven advertising on Meta, TikTok, and Shopee.<br class="hidden md:block">
-                    
+                <p class="text-base md:text-lg text-gray-500 max-w-2xl mx-auto leading-relaxed" data-lang="id">
+                    Kami adalah agensi pemasaran digital yang berfokus pada <span class="text-primary-blue font-medium">hasil nyata</span>, bukan sekadar tayangan atau klik. Kami bantu bisnis Anda berkembang melalui iklan di <span class="text-primary-blue font-medium">Meta, TikTok dan Shopee</span> yang terbukti efektif.<br class="hidden md:block">
+                </p>
+                <p class="text-base md:text-lg text-gray-500 max-w-2xl mx-auto leading-relaxed hidden" data-lang="en">
+                    We are a digital marketing agency focused on <span class="text-primary-blue font-medium">real results</span> not just impressions or clicks. We help your business grow through proven advertising on <span class="text-primary-blue font-medium">Meta, TikTok, and Shopee</span>.<br class="hidden md:block">
                 </p>
                 
+                <!-- Trust Indicators -->
+                <div class="flex flex-wrap items-center justify-center gap-6 md:gap-8 pt-8 text-sm text-gray-400">
+                    <div class="flex items-center gap-2">
+                        <div class="w-2 h-2 bg-green-500 rounded-full animate-pulse"></div>
+                        <span data-lang="id">Dipercaya 50+ Klien</span>
+                        <span data-lang="en" class="hidden">Trusted by 200+ Brands</span>
+                    </div>
+                    <div class="flex items-center gap-2">
+                        <div class="w-2 h-2 bg-primary-blue rounded-full animate-pulse"></div>
+                        <span data-lang="id">150% Rata-rata ROI</span>
+                        <span data-lang="en" class="hidden">150% Average ROI</span>
+                    </div>
+                    <div class="flex items-center gap-2">
+                        <div class="w-2 h-2 bg-purple-500 rounded-full animate-pulse"></div>
+                        <span data-lang="id">Dukungan 24/7</span>
+                        <span data-lang="en" class="hidden">24/7 Support</span>
+                    </div>
+                </div>
+                
                 <div class="grid grid-cols-3 md:grid-cols-3 gap-3 md:gap-6 max-w-3xl mx-auto pt-12">
-                    <div class="group relative bg-white border border-gray-200 rounded-xl md:rounded-2xl p-3 md:p-6 hover:border-gray-400 transition-all duration-300">
-                        <div class="absolute top-2 right-2 md:top-4 md:right-4 w-6 h-6 md:w-8 md:h-8 border border-gray-200 rounded-full opacity-0 group-hover:opacity-100 transition-opacity"></div>
+                    <div class="group relative bg-white border border-gray-200 rounded-xl md:rounded-2xl p-3 md:p-6 hover:border-primary-blue/40 hover-lift transition-all duration-300 hover-scale">
+                        <div class="absolute top-2 right-2 md:top-4 md:right-4 w-6 h-6 md:w-8 md:h-8 border border-primary-blue/20 rounded-full opacity-0 group-hover:opacity-100 transition-opacity animate-pulse-glow"></div>
                         <div class="text-left space-y-1 md:space-y-2">
-                            <div class="text-xl md:text-3xl font-light text-black">2+</div>
-                            <div class="text-[9px] md:text-xs uppercase tracking-wider text-gray-500">Years Experience</div>
+                            <div class="text-xl md:text-3xl font-light text-black gradient-text">2+</div>
+                            <div class="text-[9px] md:text-xs uppercase tracking-wider text-gray-500" data-lang="id">Tahun Pengalaman</div>
+                            <div class="text-[9px] md:text-xs uppercase tracking-wider text-gray-500 hidden" data-lang="en">Years Experience</div>
                         </div>
                     </div>
                     
-                    <div class="group relative bg-primary-blue text-white border border-primary-blue rounded-xl md:rounded-2xl p-3 md:p-6 hover:opacity-90 transition-all duration-300">
-                        <div class="absolute top-2 right-2 md:top-4 md:right-4 w-6 h-6 md:w-8 md:h-8 border border-white/20 rounded-full opacity-0 group-hover:opacity-100 transition-opacity"></div>
+                    <div class="group relative bg-gradient-to-br from-primary-blue to-blue-600 text-white border border-primary-blue rounded-xl md:rounded-2xl p-3 md:p-6 hover:opacity-90 hover-lift transition-all duration-300 hover-scale neon-glow-hover">
+                        <div class="absolute top-2 right-2 md:top-4 md:right-4 w-6 h-6 md:w-8 md:h-8 border border-white/20 rounded-full opacity-0 group-hover:opacity-100 transition-opacity animate-pulse-glow"></div>
                         <div class="text-left space-y-1 md:space-y-2">
-                            <div class="text-xl md:text-3xl font-light">120+</div>
-                            <div class="text-[9px] md:text-xs uppercase tracking-wider text-primary-white">Projects Done</div>
+                            <div class="text-xl md:text-3xl font-light">50+</div>
+                            <div class="text-[9px] md:text-xs uppercase tracking-wider text-primary-white" data-lang="id">Klien Berhasil</div>
+                            <div class="text-[9px] md:text-xs uppercase tracking-wider text-primary-white hidden" data-lang="en">Projects Done</div>
                         </div>
                     </div>
                     
-                    <div class="group relative bg-white border border-gray-200 rounded-xl md:rounded-2xl p-3 md:p-6 hover:border-gray-400 transition-all duration-300">
-                        <div class="absolute top-2 right-2 md:top-4 md:right-4 w-6 h-6 md:w-8 md:h-8 border border-gray-200 rounded-full opacity-0 group-hover:opacity-100 transition-opacity"></div>
+                    <div class="group relative bg-white border border-gray-200 rounded-xl md:rounded-2xl p-3 md:p-6 hover:border-primary-blue/40 hover-lift transition-all duration-300 hover-scale">
+                        <div class="absolute top-2 right-2 md:top-4 md:right-4 w-6 h-6 md:w-8 md:h-8 border border-primary-blue/20 rounded-full opacity-0 group-hover:opacity-100 transition-opacity animate-pulse-glow"></div>
                         <div class="text-left space-y-1 md:space-y-2">
-                            <div class="text-xl md:text-3xl font-light text-black">50+</div>
-                            <div class="text-[9px] md:text-xs uppercase tracking-wider text-gray-500">Brand Partners</div>
+                            <div class="text-xl md:text-3xl font-light text-black gradient-text">3</div>
+                            <div class="text-[9px] md:text-xs uppercase tracking-wider text-gray-500" data-lang="id">Platform Utama</div>
+                            <div class="text-[9px] md:text-xs uppercase tracking-wider text-gray-500 hidden" data-lang="en">Brand Partners</div>
                         </div>
                     </div>
                 </div>
                 
                 <div class="pt-8">
-                    <a href="#contact-section" class="inline-flex items-center gap-2 px-8 py-4 bg-primary-blue text-white text-base font-light rounded-lg hover:opacity-90 transition-all duration-300 shadow-lg hover:shadow-xl">
-                        <span>Start Your Free Consultation</span>
+                    <a href="#contact-section" class="inline-flex items-center gap-2 px-8 py-4 bg-gradient-to-r from-primary-blue to-blue-600 text-white text-base font-light rounded-lg hover:opacity-90 transition-all duration-300 shadow-lg hover:shadow-xl hover-lift magnetic-hover neon-glow-hover animate-shimmer">
+                        <span data-lang="id">DAPATKAN KONSULTASI GRATIS</span>
+                        <span data-lang="en" class="hidden">Start Your Free Consultation</span>
                         <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"/>
                         </svg>
@@ -122,7 +182,8 @@
     </div>
     
     <div class="absolute bottom-8 left-1/2 -translate-x-1/2 z-20 hidden lg:flex flex-col items-center gap-3">
-        <div class="text-[10px] tracking-widest text-gray-400 uppercase">Scroll Down</div>
+        <div class="text-[10px] tracking-widest text-gray-400 uppercase" data-lang="id">Scroll Down</div>
+        <div class="text-[10px] tracking-widest text-gray-400 uppercase hidden" data-lang="en">Scroll Down</div>
         <div class="w-[1px] h-16 bg-gradient-to-b from-gray-300 to-transparent"></div>
     </div>
     
@@ -143,3 +204,4 @@
     </div>
     
 </section>
+

@@ -2,8 +2,12 @@
     <div class="max-w-3xl mx-auto">
         
         <div class="text-center mb-8 md:mb-16">
-            <p class="text-xs md:text-sm text-gray-400 font-light mb-3 md:mb-4 tracking-[0.2em] uppercase">Get In Touch</p>
-            <h2 class="text-3xl md:text-5xl lg:text-6xl font-light tracking-tight leading-tight mb-4 md:mb-6">
+            <p class="text-xs md:text-sm text-gray-400 font-light mb-3 md:mb-4 tracking-[0.2em] uppercase" data-lang="id">Hubungi Kami</p>
+            <p class="text-xs md:text-sm text-gray-400 font-light mb-3 md:mb-4 tracking-[0.2em] uppercase hidden" data-lang="en">Get In Touch</p>
+            <h2 class="text-3xl md:text-5xl lg:text-6xl font-light tracking-tight leading-tight mb-4 md:mb-6" data-lang="id">
+                Mari Kita Diskusikan Proyek Anda!
+            </h2>
+            <h2 class="text-3xl md:text-5xl lg:text-6xl font-light tracking-tight leading-tight mb-4 md:mb-6 hidden" data-lang="en">
                 Let Us Contact You!
             </h2>
             <div class="w-16 h-px bg-primary-blue mx-auto"></div>
@@ -11,88 +15,78 @@
         
         <form class="space-y-4 md:space-y-6 mb-12 md:mb-20">
             
-            <div class="grid grid-cols-1 md:grid-cols-2 gap-4 md:gap-6">
-                <div class="form-group">
-                    <label for="name" class="block text-sm font-light text-gray-600 mb-2">Name</label>
-                    <input 
-                        type="text" 
-                        id="name" 
-                        name="name" 
-                        placeholder="Media Matrix"
-                        required
-                        class="w-full px-4 py-3.5 bg-gray-50 border border-gray-200 rounded-lg text-base font-light text-gray-900 placeholder-gray-400 
-                               focus:outline-none focus:ring-2 focus:ring-primary-blue focus:border-transparent focus:bg-white
-                               transition-all duration-200 ease-in-out">
-                </div>
-                
-                <div class="form-group">
-                    <label for="email" class="block text-sm font-light text-gray-600 mb-2">Email</label>
-                    <input 
-                        type="email" 
-                        id="email" 
-                        name="email" 
-                        placeholder="mediamatrix@example.com"
-                        required
-                        class="w-full px-4 py-3.5 bg-gray-50 border border-gray-200 rounded-lg text-base font-light text-gray-900 placeholder-gray-400 
-                               focus:outline-none focus:ring-2 focus:ring-primary-blue focus:border-transparent focus:bg-white
-                               transition-all duration-200 ease-in-out">
-                </div>
-            </div>
-            
-            <div class="grid grid-cols-1 md:grid-cols-2 gap-4 md:gap-6">
-                <div class="form-group">
-                    <label for="company" class="block text-sm font-light text-gray-600 mb-2">Company</label>
-                    <input 
-                        type="text" 
-                        id="company" 
-                        name="company" 
-                        placeholder="Your Company"
-                        class="w-full px-4 py-3.5 bg-gray-50 border border-gray-200 rounded-lg text-base font-light text-gray-900 placeholder-gray-400 
-                               focus:outline-none focus:ring-2 focus:ring-primary-blue focus:border-transparent focus:bg-white
-                               transition-all duration-200 ease-in-out">
-                </div>
-                
-                <div class="form-group">
-                    <label for="budget" class="block text-sm font-light text-gray-600 mb-2">Budget</label>
-                    <select 
-                        id="budget" 
-                        name="budget"
-                        class="w-full px-4 py-3.5 bg-gray-50 border border-gray-200 rounded-lg text-base font-light text-gray-900 
-                               focus:outline-none focus:ring-2 focus:ring-primary-blue focus:border-transparent focus:bg-white
-                               transition-all duration-200 ease-in-out appearance-none bg-[url('data:image/svg+xml;charset=utf-8,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%2212%22%20height%3D%2212%22%20viewBox%3D%220%200%2012%2012%22%3E%3Cpath%20fill%3D%22%23666%22%20d%3D%22M6%208L2%204h8z%22%2F%3E%3C%2Fsvg%3E')] bg-[length:12px] bg-[right_1rem_center] bg-no-repeat">
-                        <option value="">Select Budget</option>
-                        <option value="5k-10k">Rp5,000 - Rp10,000</option>
-                        <option value="10k-25k">Rp10,000 - Rp25,000</option>
-                        <option value="25k-50k">Rp25,000 - Rp50,000</option>
-                        <option value="50k+">Rp50,000+</option>
-                    </select>
-                </div>
-            </div>
-            
             <div class="form-group">
-                <label for="subject" class="block text-sm font-light text-gray-600 mb-2">Subject</label>
+                <label for="name" class="block text-sm font-light text-gray-600 mb-2" data-lang="id">Nama*</label>
+                <label for="name" class="block text-sm font-light text-gray-600 mb-2 hidden" data-lang="en">Name*</label>
                 <input 
                     type="text" 
-                    id="subject" 
-                    name="subject" 
-                    placeholder="Project inquiry"
+                    id="name" 
+                    name="name" 
+                    placeholder="Your name"
                     required
                     class="w-full px-4 py-3.5 bg-gray-50 border border-gray-200 rounded-lg text-base font-light text-gray-900 placeholder-gray-400 
-                           focus:outline-none focus:ring-2 focus:ring-black focus:border-transparent focus:bg-white
+                           focus:outline-none focus:ring-2 focus:ring-primary-blue focus:border-transparent focus:bg-white
                            transition-all duration-200 ease-in-out">
             </div>
             
             <div class="form-group">
-                <label for="message" class="block text-sm font-light text-gray-600 mb-2">Message</label>
-                    <textarea 
-                    id="message" 
-                    name="message" 
-                    rows="4"
-                    placeholder="Tell us about your advertising goals and target audience..."
+                <label for="company" class="block text-sm font-light text-gray-600 mb-2" data-lang="id">Nama dan Bidang Usaha*</label>
+                <label for="company" class="block text-sm font-light text-gray-600 mb-2 hidden" data-lang="en">Company and Business Field*</label>
+                <input 
+                    type="text" 
+                    id="company" 
+                    name="company" 
+                    placeholder="Media Matrix (Advertising Agency)"
                     required
                     class="w-full px-4 py-3.5 bg-gray-50 border border-gray-200 rounded-lg text-base font-light text-gray-900 placeholder-gray-400 
                            focus:outline-none focus:ring-2 focus:ring-primary-blue focus:border-transparent focus:bg-white
-                           transition-all duration-200 ease-in-out resize-none md:resize-y"></textarea>
+                           transition-all duration-200 ease-in-out">
+            </div>
+            
+            <div class="form-group">
+                <label for="instagram" class="block text-sm font-light text-gray-600 mb-2" data-lang="id">Instagram Usaha*</label>
+                <label for="instagram" class="block text-sm font-light text-gray-600 mb-2 hidden" data-lang="en">Business Instagram*</label>
+                <input 
+                    type="text" 
+                    id="instagram" 
+                    name="instagram" 
+                    placeholder="@mediamatrix.id"
+                    required
+                    class="w-full px-4 py-3.5 bg-gray-50 border border-gray-200 rounded-lg text-base font-light text-gray-900 placeholder-gray-400 
+                           focus:outline-none focus:ring-2 focus:ring-primary-blue focus:border-transparent focus:bg-white
+                           transition-all duration-200 ease-in-out">
+            </div>
+            
+            <div class="form-group">
+                <label for="whatsapp" class="block text-sm font-light text-gray-600 mb-2" data-lang="id">WhatsApp Number*</label>
+                <label for="whatsapp" class="block text-sm font-light text-gray-600 mb-2 hidden" data-lang="en">WhatsApp Number*</label>
+                <input 
+                    type="tel" 
+                    id="whatsapp" 
+                    name="whatsapp" 
+                    placeholder="Nomor Telefon WhatsApp"
+                    required
+                    class="w-full px-4 py-3.5 bg-gray-50 border border-gray-200 rounded-lg text-base font-light text-gray-900 placeholder-gray-400 
+                           focus:outline-none focus:ring-2 focus:ring-primary-blue focus:border-transparent focus:bg-white
+                           transition-all duration-200 ease-in-out">
+            </div>
+            
+            <div class="form-group">
+                <label for="service" class="block text-sm font-light text-gray-600 mb-2" data-lang="id">Jasa Yang Dibutuhkan*</label>
+                <label for="service" class="block text-sm font-light text-gray-600 mb-2 hidden" data-lang="en">Service Needed*</label>
+                <select 
+                    id="service" 
+                    name="service"
+                    required
+                    class="w-full px-4 py-3.5 bg-gray-50 border border-gray-200 rounded-lg text-base font-light text-gray-900 
+                           focus:outline-none focus:ring-2 focus:ring-primary-blue focus:border-transparent focus:bg-white
+                           transition-all duration-200 ease-in-out appearance-none bg-[url('data:image/svg+xml;charset=utf-8,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%2212%22%20height%3D%2212%22%20viewBox%3D%220%200%2012%2012%22%3E%3Cpath%20fill%3D%22%23666%22%20d%3D%22M6%208L2%204h8z%22%2F%3E%3C%2Fsvg%3E')] bg-[length:12px] bg-[right_1rem_center] bg-no-repeat">
+                    <option value="" data-lang="id">Pilih Jasa</option>
+                    <option value="" data-lang="en" class="hidden">Select Service</option>
+                    <option value="meta-ads">Meta ads</option>
+                    <option value="tiktok-ads">TikTok ads</option>
+                    <option value="shopee-ads">Shopee ads</option>
+                </select>
             </div>
             
             <div class="pt-2 md:pt-4">
@@ -103,10 +97,14 @@
                            focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-primary-blue
                            transition-all duration-200 ease-in-out
                            disabled:opacity-50 disabled:cursor-not-allowed">
-                    Send Message
+                    <span data-lang="id">Submit</span>
+                    <span data-lang="en" class="hidden">Submit</span>
                 </button>
                 
-                <p class="mt-3 md:mt-4 text-xs text-gray-500 font-light">
+                <p class="mt-3 md:mt-4 text-xs text-gray-500 font-light" data-lang="id">
+                    Kami akan menghubungi Anda dalam 24 jam.
+                </p>
+                <p class="mt-3 md:mt-4 text-xs text-gray-500 font-light hidden" data-lang="en">
                     We'll get back to you within 24 hours.
                 </p>
             </div>
@@ -115,21 +113,24 @@
         
         <div class="grid grid-cols-1 md:grid-cols-3 gap-6 md:gap-8 mb-10 pb-10 md:mb-20 md:pb-20 border-b border-gray-200">
             <div class="text-center md:text-left">
-                <p class="text-xs text-gray-400 tracking-[0.15em] uppercase mb-1.5 md:mb-2">Email</p>
+                <p class="text-xs text-gray-400 tracking-[0.15em] uppercase mb-1.5 md:mb-2" data-lang="id">Email</p>
+                <p class="text-xs text-gray-400 tracking-[0.15em] uppercase mb-1.5 md:mb-2 hidden" data-lang="en">Email</p>
                 <a href="mailto:mediamatrix@gmail.com" class="text-sm md:text-base font-light text-black hover:text-primary-blue transition-colors break-all">
                     mediamatrix@gmail.com
                 </a>
             </div>
             
             <div class="text-center md:text-left">
-                <p class="text-xs text-gray-400 tracking-[0.15em] uppercase mb-1.5 md:mb-2">Phone</p>
+                <p class="text-xs text-gray-400 tracking-[0.15em] uppercase mb-1.5 md:mb-2" data-lang="id">Telepon</p>
+                <p class="text-xs text-gray-400 tracking-[0.15em] uppercase mb-1.5 md:mb-2 hidden" data-lang="en">Phone</p>
                 <a href="tel:+1234567890" class="text-sm md:text-base font-light text-black hover:text-primary-blue transition-colors">
                     +62 1233 4854 8461
                 </a>
             </div>
             
             <div class="text-center md:text-left">
-                <p class="text-xs text-gray-400 tracking-[0.15em] uppercase mb-1.5 md:mb-2">Location</p>
+                <p class="text-xs text-gray-400 tracking-[0.15em] uppercase mb-1.5 md:mb-2" data-lang="id">Lokasi</p>
+                <p class="text-xs text-gray-400 tracking-[0.15em] uppercase mb-1.5 md:mb-2 hidden" data-lang="en">Location</p>
                 <p class="text-sm md:text-base font-light text-black">
                     Jakarta
                 </p>

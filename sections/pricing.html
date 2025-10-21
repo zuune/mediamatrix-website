@@ -1,0 +1,355 @@
+<section class="bg-white text-black w-full py-20 md:py-32 px-8 md:px-16 lg:px-24 relative overflow-hidden">
+    <style>
+        .pricing-container {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 2rem;
+            justify-content: center;
+            align-items: stretch;
+            max-width: 1200px;
+            margin: 0 auto;
+            width: 100%;
+        }
+        
+        .pricing-card {
+            flex: 1;
+            min-width: 300px;
+            max-width: 400px;
+            background: white;
+            border: 1px solid #e5e7eb;
+            border-radius: 1rem;
+            padding: 2rem;
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+            transition: all 0.3s ease;
+        }
+        
+        .pricing-card:hover {
+            box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1);
+            transform: translateY(-4px);
+        }
+        
+        @media (max-width: 768px) {
+            .pricing-container {
+                flex-direction: column;
+                align-items: center;
+            }
+            
+            .pricing-card {
+                width: 100%;
+                max-width: 400px;
+            }
+        }
+        
+        /* Ensure all sections are visible */
+        .stagger-animation {
+            opacity: 1 !important;
+            visibility: visible !important;
+        }
+        
+        .stagger-animation > * {
+            opacity: 1 !important;
+            visibility: visible !important;
+        }
+    </style>
+    
+    <!-- Background Effects -->
+    <div class="absolute inset-0 pattern-dots opacity-30"></div>
+    <div class="absolute top-0 left-0 w-full h-full">
+        <div class="absolute top-20 right-20 w-32 h-32 bg-primary-blue/5 rounded-full blur-xl animate-float"></div>
+        <div class="absolute bottom-20 left-20 w-40 h-40 bg-primary-blue/3 rounded-full blur-2xl animate-float-delayed"></div>
+    </div>
+    
+    <div class="max-w-7xl mx-auto relative z-10">
+        
+        <div class="text-center mb-16 md:mb-20 stagger-animation">
+            <p class="text-xs md:text-sm text-gray-400 font-light mb-4 tracking-[0.2em] uppercase" data-lang="id">Paket Layanan</p>
+            <p class="text-xs md:text-sm text-gray-400 font-light mb-4 tracking-[0.2em] uppercase hidden" data-lang="en">Service Packages</p>
+            <h2 class="text-4xl md:text-5xl lg:text-6xl font-light tracking-tight leading-tight mb-6 text-shadow">
+                <span class="text-primary-blue gradient-text" data-lang="id">Paket Layanan</span>
+                <span class="text-primary-blue gradient-text hidden" data-lang="en">Service Packages</span>
+                <br>
+                <span class="font-medium" data-lang="id">Terjangkau & Transparan</span>
+                <span class="font-medium hidden" data-lang="en">Affordable & Transparent</span>
+            </h2>
+            <div class="w-16 h-px bg-gradient-to-r from-transparent via-primary-blue to-transparent mx-auto animate-gradient-shift"></div>
+            <p class="text-lg text-gray-600 font-light leading-relaxed mt-6 max-w-3xl mx-auto" data-lang="id">
+                Kami menawarkan layanan iklan digital yang komprehensif dengan hasil yang terukur. Setiap paket dirancang khusus untuk platform yang berbeda dengan strategi yang telah terbukti efektif.
+            </p>
+            <p class="text-lg text-gray-600 font-light leading-relaxed mt-6 max-w-3xl mx-auto hidden" data-lang="en">
+                We offer comprehensive digital advertising services with measurable results. Each package is specifically designed for different platforms with proven effective strategies.
+            </p>
+        </div>
+        
+        <div class="pricing-container mb-16 stagger-animation">
+            
+            <!-- Meta Ads Package -->
+            <div class="pricing-card">
+                <div class="text-center mb-8">
+                    <div class="w-16 h-16 bg-gradient-to-br from-primary-blue to-blue-600 rounded-full flex items-center justify-center mx-auto mb-6 hover-rotate">
+                        <svg class="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M7 4V2a1 1 0 011-1h8a1 1 0 011 1v2M7 4h10M7 4l-2 16h14l-2-16M10 9v6M14 9v6"/>
+                        </svg>
+                    </div>
+                    <h3 class="text-2xl font-light text-gray-900 mb-2" data-lang="id">Meta Ads</h3>
+                    <h3 class="text-2xl font-light text-gray-900 mb-2 hidden" data-lang="en">Meta Ads</h3>
+                    <div class="text-4xl font-bold text-primary-blue mb-2">
+                        <span class="text-sm font-normal text-gray-600" data-lang="id">Mulai dari</span>
+                        <span class="text-sm font-normal text-gray-600 hidden" data-lang="en">Starting From</span>
+                        <br>IDR <span class="text-5xl">4</span>Mio
+                        <br><span class="text-sm text-gray-500" data-lang="id">/Bulan</span>
+                        <span class="text-sm text-gray-500 hidden" data-lang="en">/Month</span>
+                    </div>
+                </div>
+                
+                <div class="space-y-4 mb-8">
+                    <h4 class="text-sm font-medium text-gray-900 mb-3" data-lang="id">Termasuk:</h4>
+                    <h4 class="text-sm font-medium text-gray-900 mb-3 hidden" data-lang="en">Includes:</h4>
+                    
+                    <ul class="space-y-3">
+                        <li class="flex items-center gap-3">
+                            <svg class="w-5 h-5 text-green-500 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
+                                <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/>
+                            </svg>
+                            <span class="text-sm text-gray-700" data-lang="id">Weekly & Monthly Updates</span>
+                            <span class="text-sm text-gray-700 hidden" data-lang="en">Weekly & Monthly Updates</span>
+                        </li>
+                        <li class="flex items-center gap-3">
+                            <svg class="w-5 h-5 text-green-500 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
+                                <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/>
+                            </svg>
+                            <span class="text-sm text-gray-700" data-lang="id">Content Creation</span>
+                            <span class="text-sm text-gray-700 hidden" data-lang="en">Content Creation</span>
+                        </li>
+                        <li class="flex items-center gap-3">
+                            <svg class="w-5 h-5 text-green-500 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
+                                <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/>
+                            </svg>
+                            <span class="text-sm text-gray-700" data-lang="id">Ads Testing and Scaling</span>
+                            <span class="text-sm text-gray-700 hidden" data-lang="en">Ads Testing and Scaling</span>
+                        </li>
+                        <li class="flex items-center gap-3">
+                            <svg class="w-5 h-5 text-green-500 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
+                                <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/>
+                            </svg>
+                            <span class="text-sm text-gray-700" data-lang="id">Daily Campaign Monitoring</span>
+                            <span class="text-sm text-gray-700 hidden" data-lang="en">Daily Campaign Monitoring</span>
+                        </li>
+                    </ul>
+                </div>
+                
+                <div class="text-center">
+                    <div class="text-xs text-gray-500 mb-4" data-lang="id">
+                        *Fee belum termasuk budget iklan
+                    </div>
+                    <div class="text-xs text-gray-500 mb-4 hidden" data-lang="en">
+                        *Fee excludes advertising budget
+                    </div>
+                </div>
+            </div>
+            
+            <!-- TikTok Ads Package -->
+            <div class="pricing-card">
+                <div class="text-center mb-8">
+                    <div class="w-16 h-16 bg-gradient-to-br from-pink-500 to-purple-600 rounded-full flex items-center justify-center mx-auto mb-6 hover-rotate">
+                        <svg class="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 10l4.553-2.276A1 1 0 0121 8.618v6.764a1 1 0 01-1.447.894L15 14M5 18h8a2 2 0 002-2V8a2 2 0 00-2-2H5a2 2 0 00-2 2v8a2 2 0 002 2z"/>
+                        </svg>
+                    </div>
+                    <h3 class="text-2xl font-light text-gray-900 mb-2" data-lang="id">TikTok Ads</h3>
+                    <h3 class="text-2xl font-light text-gray-900 mb-2 hidden" data-lang="en">TikTok Ads</h3>
+                    <div class="text-4xl font-bold text-primary-blue mb-2">
+                        <span class="text-sm font-normal text-gray-600" data-lang="id">Mulai dari</span>
+                        <span class="text-sm font-normal text-gray-600 hidden" data-lang="en">Starting From</span>
+                        <br>IDR <span class="text-5xl">4</span>Mio
+                        <br><span class="text-sm text-gray-500" data-lang="id">/Bulan</span>
+                        <span class="text-sm text-gray-500 hidden" data-lang="en">/Month</span>
+                    </div>
+                </div>
+                
+                <div class="space-y-4 mb-8">
+                    <h4 class="text-sm font-medium text-gray-900 mb-3" data-lang="id">Termasuk:</h4>
+                    <h4 class="text-sm font-medium text-gray-900 mb-3 hidden" data-lang="en">Includes:</h4>
+                    
+                    <ul class="space-y-3">
+                        <li class="flex items-center gap-3">
+                            <svg class="w-5 h-5 text-green-500 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
+                                <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/>
+                            </svg>
+                            <span class="text-sm text-gray-700" data-lang="id">Weekly & Monthly Updates</span>
+                            <span class="text-sm text-gray-700 hidden" data-lang="en">Weekly & Monthly Updates</span>
+                        </li>
+                        <li class="flex items-center gap-3">
+                            <svg class="w-5 h-5 text-green-500 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
+                                <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/>
+                            </svg>
+                            <span class="text-sm text-gray-700" data-lang="id">Content Creation</span>
+                            <span class="text-sm text-gray-700 hidden" data-lang="en">Content Creation</span>
+                        </li>
+                        <li class="flex items-center gap-3">
+                            <svg class="w-5 h-5 text-green-500 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
+                                <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/>
+                            </svg>
+                            <span class="text-sm text-gray-700" data-lang="id">Ads Testing and Scaling</span>
+                            <span class="text-sm text-gray-700 hidden" data-lang="en">Ads Testing and Scaling</span>
+                        </li>
+                        <li class="flex items-center gap-3">
+                            <svg class="w-5 h-5 text-green-500 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
+                                <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/>
+                            </svg>
+                            <span class="text-sm text-gray-700" data-lang="id">Daily Campaign Monitoring</span>
+                            <span class="text-sm text-gray-700 hidden" data-lang="en">Daily Campaign Monitoring</span>
+                        </li>
+                    </ul>
+                </div>
+                
+                <div class="text-center">
+                    <div class="text-xs text-gray-500 mb-4" data-lang="id">
+                        *Fee belum termasuk budget iklan
+                    </div>
+                    <div class="text-xs text-gray-500 mb-4 hidden" data-lang="en">
+                        *Fee excludes advertising budget
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Shopee Ads Package -->
+            <div class="pricing-card">
+                <div class="text-center mb-8">
+                    <div class="w-16 h-16 bg-gradient-to-br from-orange-500 to-red-500 rounded-full flex items-center justify-center mx-auto mb-6 hover-rotate">
+                        <svg class="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M16 11V7a4 4 0 00-8 0v4M5 9h14l1 12H4L5 9z"/>
+                        </svg>
+                    </div>
+                    <h3 class="text-2xl font-light text-gray-900 mb-2" data-lang="id">Shopee Ads</h3>
+                    <h3 class="text-2xl font-light text-gray-900 mb-2 hidden" data-lang="en">Shopee Ads</h3>
+                    <div class="text-4xl font-bold text-primary-blue mb-2">
+                        <span class="text-sm font-normal text-gray-600" data-lang="id">Mulai dari</span>
+                        <span class="text-sm font-normal text-gray-600 hidden" data-lang="en">Starting From</span>
+                        <br>IDR <span class="text-5xl">5</span>Mio
+                        <br><span class="text-sm text-gray-500" data-lang="id">/Bulan</span>
+                        <span class="text-sm text-gray-500 hidden" data-lang="en">/Month</span>
+                    </div>
+                </div>
+                
+                <div class="space-y-4 mb-8">
+                    <h4 class="text-sm font-medium text-gray-900 mb-3" data-lang="id">Termasuk:</h4>
+                    <h4 class="text-sm font-medium text-gray-900 mb-3 hidden" data-lang="en">Includes:</h4>
+                    
+                    <ul class="space-y-3">
+                        <li class="flex items-center gap-3">
+                            <svg class="w-5 h-5 text-green-500 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
+                                <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/>
+                            </svg>
+                            <span class="text-sm text-gray-700" data-lang="id">Weekly & Monthly Updates</span>
+                            <span class="text-sm text-gray-700 hidden" data-lang="en">Weekly & Monthly Updates</span>
+                        </li>
+                        <li class="flex items-center gap-3">
+                            <svg class="w-5 h-5 text-green-500 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
+                                <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/>
+                            </svg>
+                            <span class="text-sm text-gray-700" data-lang="id">Shop Monitoring</span>
+                            <span class="text-sm text-gray-700 hidden" data-lang="en">Shop Monitoring</span>
+                        </li>
+                        <li class="flex items-center gap-3">
+                            <svg class="w-5 h-5 text-green-500 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
+                                <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/>
+                            </svg>
+                            <span class="text-sm text-gray-700" data-lang="id">Ads Testing and Scaling</span>
+                            <span class="text-sm text-gray-700 hidden" data-lang="en">Ads Testing and Scaling</span>
+                        </li>
+                        <li class="flex items-center gap-3">
+                            <svg class="w-5 h-5 text-green-500 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
+                                <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/>
+                            </svg>
+                            <span class="text-sm text-gray-700" data-lang="id">Daily Campaign Monitoring</span>
+                            <span class="text-sm text-gray-700 hidden" data-lang="en">Daily Campaign Monitoring</span>
+                        </li>
+                    </ul>
+                </div>
+                
+                <div class="text-center">
+                    <div class="text-xs text-gray-500 mb-4" data-lang="id">
+                        *Fee belum termasuk budget iklan
+                    </div>
+                    <div class="text-xs text-gray-500 mb-4 hidden" data-lang="en">
+                        *Fee excludes advertising budget
+                    </div>
+                </div>
+            </div>
+            
+        </div>
+        
+        <!-- Additional Info Section -->
+        <div class="bg-gray-50 rounded-2xl p-8 md:p-12 mb-16 stagger-animation">
+            <div class="text-center mb-8">
+                <h3 class="text-2xl md:text-3xl font-light text-gray-900 mb-4" data-lang="id">
+                    Mengapa Memilih <span class="text-primary-blue font-medium">Media Matrix?</span>
+                </h3>
+                <h3 class="text-2xl md:text-3xl font-light text-gray-900 mb-4 hidden" data-lang="en">
+                    Why Choose <span class="text-primary-blue font-medium">Media Matrix?</span>
+                </h3>
+            </div>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+                <div class="text-center">
+                    <div class="w-12 h-12 bg-primary-blue/10 rounded-full flex items-center justify-center mx-auto mb-4">
+                        <svg class="w-6 h-6 text-primary-blue" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/>
+                        </svg>
+                    </div>
+                    <h4 class="text-lg font-medium text-gray-900 mb-2" data-lang="id">50+ Klien</h4>
+                    <h4 class="text-lg font-medium text-gray-900 mb-2 hidden" data-lang="en">50+ Clients</h4>
+                    <p class="text-sm text-gray-600" data-lang="id">Terpercaya oleh berbagai bisnis</p>
+                    <p class="text-sm text-gray-600 hidden" data-lang="en">Trusted by various businesses</p>
+                </div>
+                
+                <div class="text-center">
+                    <div class="w-12 h-12 bg-green-100 rounded-full flex items-center justify-center mx-auto mb-4">
+                        <svg class="w-6 h-6 text-green-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 7h8m0 0v8m0-8l-8 8-4-4-6 6"/>
+                        </svg>
+                    </div>
+                    <h4 class="text-lg font-medium text-gray-900 mb-2" data-lang="id">150% ROI</h4>
+                    <h4 class="text-lg font-medium text-gray-900 mb-2 hidden" data-lang="en">150% ROI</h4>
+                    <p class="text-sm text-gray-600" data-lang="id">Rata-rata peningkatan ROI</p>
+                    <p class="text-sm text-gray-600 hidden" data-lang="en">Average ROI increase</p>
+                </div>
+                
+                <div class="text-center">
+                    <div class="w-12 h-12 bg-purple-100 rounded-full flex items-center justify-center mx-auto mb-4">
+                        <svg class="w-6 h-6 text-purple-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"/>
+                        </svg>
+                    </div>
+                    <h4 class="text-lg font-medium text-gray-900 mb-2" data-lang="id">24/7 Support</h4>
+                    <h4 class="text-lg font-medium text-gray-900 mb-2 hidden" data-lang="en">24/7 Support</h4>
+                    <p class="text-sm text-gray-600" data-lang="id">Dukungan penuh waktu</p>
+                    <p class="text-sm text-gray-600 hidden" data-lang="en">Full-time support</p>
+                </div>
+                
+                <div class="text-center">
+                    <div class="w-12 h-12 bg-orange-100 rounded-full flex items-center justify-center mx-auto mb-4">
+                        <svg class="w-6 h-6 text-orange-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z"/>
+                        </svg>
+                    </div>
+                    <h4 class="text-lg font-medium text-gray-900 mb-2" data-lang="id">Data Driven</h4>
+                    <h4 class="text-lg font-medium text-gray-900 mb-2 hidden" data-lang="en">Data Driven</h4>
+                    <p class="text-sm text-gray-600" data-lang="id">Strategi berbasis data</p>
+                    <p class="text-sm text-gray-600 hidden" data-lang="en">Data-based strategy</p>
+                </div>
+            </div>
+        </div>
+        
+        <div class="text-center">
+            <a href="#contact-section" class="inline-flex items-center gap-2 px-8 py-4 bg-gradient-to-r from-primary-blue to-blue-600 text-white text-base font-medium rounded-lg hover:opacity-90 transition-all duration-300 shadow-lg hover:shadow-xl hover-lift magnetic-hover neon-glow-hover animate-shimmer">
+                <span data-lang="id">DAPATKAN KONSULTASI GRATIS</span>
+                <span data-lang="en" class="hidden">Start Your Free Consultation</span>
+                <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"/>
+                </svg>
+            </a>
+        </div>
+        
+    </div>
+</section>

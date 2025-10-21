@@ -1,20 +1,40 @@
-<section class="bg-primary-blue text-white w-full py-20 md:py-32 px-8 md:px-16 lg:px-24">
-    <div class="max-w-7xl mx-auto">
+<section class="bg-gradient-to-br from-primary-blue via-blue-600 to-purple-700 text-white w-full py-20 md:py-32 px-8 md:px-16 lg:px-24 relative overflow-hidden">
+    <!-- Background Effects -->
+    <div class="absolute inset-0 bg-gradient-to-br from-primary-blue/90 via-blue-600/90 to-purple-700/90"></div>
+    <div class="absolute inset-0 pattern-dots opacity-20"></div>
+    <div class="absolute top-0 left-0 w-full h-full">
+        <div class="absolute top-20 left-20 w-32 h-32 bg-white/5 rounded-full blur-xl animate-float"></div>
+        <div class="absolute bottom-20 right-20 w-40 h-40 bg-white/3 rounded-full blur-2xl animate-float-delayed"></div>
+        <div class="absolute top-1/2 left-1/2 w-24 h-24 bg-white/4 rounded-full blur-lg animate-float-slow"></div>
+    </div>
+    
+    <div class="max-w-7xl mx-auto relative z-10">
         
-        <div class="mb-16 md:mb-20">
-            <p class="text-xs md:text-sm text-primary-white/70 font-light mb-4 tracking-[0.2em] uppercase">Our Services</p>
-            <h2 class="text-4xl md:text-5xl lg:text-6xl font-light tracking-tight leading-tight">
-                Full-service advertising<br>
-                <span class="text-primary-white/60">solutions.</span>
+        <div class="mb-16 md:mb-20 stagger-animation">
+            <p class="text-xs md:text-sm text-primary-white/70 font-light mb-4 tracking-[0.2em] uppercase" data-lang="id">Layanan Kami</p>
+            <p class="text-xs md:text-sm text-primary-white/70 font-light mb-4 tracking-[0.2em] uppercase hidden" data-lang="en">Our Services</p>
+            <h2 class="text-4xl md:text-5xl lg:text-6xl font-light tracking-tight leading-tight text-shadow-lg" data-lang="id">
+                Performance Based<br>
+                <span class="text-white font-medium drop-shadow-lg">Agency</span>
             </h2>
+            <h2 class="text-4xl md:text-5xl lg:text-6xl font-light tracking-tight leading-tight text-shadow-lg hidden" data-lang="en">
+                Full-service advertising<br>
+                <span class="text-white font-medium drop-shadow-lg">solutions.</span>
+            </h2>
+            <p class="text-lg text-primary-white/80 font-light leading-relaxed mt-6 max-w-3xl" data-lang="id">
+                Media Matrix adalah agensi pemasaran digital sejak 2024 yang berdedikasi untuk membantu bisnis mencapai tujuan pertumbuhannya melalui strategi periklanan online yang efektif dan efisien.
+            </p>
+            <p class="text-lg text-primary-white/80 font-light leading-relaxed mt-6 max-w-3xl hidden" data-lang="en">
+                We are a digital marketing agency focused on real results, not just impressions or clicks. We help your business grow through proven advertising on Meta, TikTok, and Shopee.
+            </p>
         </div>
         
-        <div class="grid grid-cols-1 md:grid-cols-3 gap-6 md:gap-8">
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-6 md:gap-8 stagger-animation">
             
-            <div class="group bg-white/10 border border-white/20 rounded-lg p-8 hover:border-white/40 transition-all duration-300">
+            <div class="group glass-effect border border-white/20 rounded-lg p-8 hover:border-white/40 hover-lift transition-all duration-300 hover-scale">
                 
                 <div class="mb-8 h-32 flex items-center justify-center">
-                    <svg class="w-24 h-24 text-white/60 group-hover:text-white/80 transition-colors duration-300" fill="none" stroke="currentColor" viewBox="0 0 120 120" stroke-width="1">
+                    <svg class="w-24 h-24 text-white/60 group-hover:text-white/80 transition-colors duration-300 hover-rotate" fill="none" stroke="currentColor" viewBox="0 0 120 120" stroke-width="1">
                         <circle cx="60" cy="60" r="35" stroke="currentColor" fill="none"/>
                         <circle cx="60" cy="60" r="25" stroke="currentColor" fill="none"/>
                         <circle cx="60" cy="60" r="15" stroke="currentColor" fill="none"/>
@@ -25,18 +45,52 @@
                 </div>
                 
                 <div class="space-y-4">
-                    <h3 class="text-xl md:text-2xl font-light tracking-tight">Brand Strategy</h3>
-                    <p class="text-sm text-primary-white/80 font-light leading-relaxed">
+                    <h3 class="text-xl md:text-2xl font-light tracking-tight text-shadow" data-lang="id">Meta Ads</h3>
+                    <h3 class="text-xl md:text-2xl font-light tracking-tight text-shadow hidden" data-lang="en">Brand Strategy</h3>
+                    <p class="text-sm text-primary-white/80 font-light leading-relaxed" data-lang="id">
+                        Iklan Facebook & Instagram yang terbukti efektif untuk meningkatkan brand awareness dan konversi penjualan dengan targeting yang presisi.
+                    </p>
+                    <p class="text-sm text-primary-white/80 font-light leading-relaxed hidden" data-lang="en">
                         Comprehensive brand positioning and messaging strategy that resonates with your target audience and sets you apart from competitors.
                     </p>
+                    <div class="pt-4 border-t border-white/10">
+                        <ul class="text-xs text-primary-white/70 space-y-2" data-lang="id">
+                            <li class="flex items-center gap-2">
+                                <div class="w-1.5 h-1.5 bg-white/60 rounded-full"></div>
+                                Campaign Setup & Optimization
+                            </li>
+                            <li class="flex items-center gap-2">
+                                <div class="w-1.5 h-1.5 bg-white/60 rounded-full"></div>
+                                Creative Content Production
+                            </li>
+                            <li class="flex items-center gap-2">
+                                <div class="w-1.5 h-1.5 bg-white/60 rounded-full"></div>
+                                Daily Monitoring & Scaling
+                            </li>
+                        </ul>
+                        <ul class="text-xs text-primary-white/70 space-y-2 hidden" data-lang="en">
+                            <li class="flex items-center gap-2">
+                                <div class="w-1.5 h-1.5 bg-white/60 rounded-full"></div>
+                                Market Research & Analysis
+                            </li>
+                            <li class="flex items-center gap-2">
+                                <div class="w-1.5 h-1.5 bg-white/60 rounded-full"></div>
+                                Brand Identity Development
+                            </li>
+                            <li class="flex items-center gap-2">
+                                <div class="w-1.5 h-1.5 bg-white/60 rounded-full"></div>
+                                Competitive Positioning
+                            </li>
+                        </ul>
+                    </div>
                 </div>
                 
             </div>
             
-            <div class="group bg-white/10 border border-white/20 rounded-lg p-8 hover:border-white/40 transition-all duration-300">
+            <div class="group glass-effect border border-white/20 rounded-lg p-8 hover:border-white/40 hover-lift transition-all duration-300 hover-scale">
                 
                 <div class="mb-8 h-32 flex items-center justify-center">
-                    <svg class="w-24 h-24 text-white/60 group-hover:text-white/80 transition-colors duration-300" fill="none" stroke="currentColor" viewBox="0 0 120 120" stroke-width="1">
+                    <svg class="w-24 h-24 text-white/60 group-hover:text-white/80 transition-colors duration-300 hover-rotate" fill="none" stroke="currentColor" viewBox="0 0 120 120" stroke-width="1">
                         <rect x="30" y="35" width="60" height="40" rx="2" stroke="currentColor"/>
                         <rect x="33" y="38" width="54" height="32" stroke="currentColor" fill="none"/>
                         <line x1="50" y1="75" x2="70" y2="75" stroke="currentColor"/>
@@ -47,18 +101,52 @@
                 </div>
                 
                 <div class="space-y-4">
-                    <h3 class="text-xl md:text-2xl font-light tracking-tight">Digital Campaigns</h3>
-                    <p class="text-sm text-primary-white/80 font-light leading-relaxed">
+                    <h3 class="text-xl md:text-2xl font-light tracking-tight text-shadow" data-lang="id">TikTok Ads</h3>
+                    <h3 class="text-xl md:text-2xl font-light tracking-tight text-shadow hidden" data-lang="en">Digital Campaigns</h3>
+                    <p class="text-sm text-primary-white/80 font-light leading-relaxed" data-lang="id">
+                        Iklan TikTok yang viral dan engaging untuk menjangkau generasi muda dengan konten kreatif yang menarik dan trendi.
+                    </p>
+                    <p class="text-sm text-primary-white/80 font-light leading-relaxed hidden" data-lang="en">
                         Multi-channel digital advertising campaigns across social media, search engines, and display networks for maximum reach and engagement.
                     </p>
+                    <div class="pt-4 border-t border-white/10">
+                        <ul class="text-xs text-primary-white/70 space-y-2" data-lang="id">
+                            <li class="flex items-center gap-2">
+                                <div class="w-1.5 h-1.5 bg-white/60 rounded-full"></div>
+                                Creative Video Production
+                            </li>
+                            <li class="flex items-center gap-2">
+                                <div class="w-1.5 h-1.5 bg-white/60 rounded-full"></div>
+                                Trend Analysis & Implementation
+                            </li>
+                            <li class="flex items-center gap-2">
+                                <div class="w-1.5 h-1.5 bg-white/60 rounded-full"></div>
+                                Performance Optimization
+                            </li>
+                        </ul>
+                        <ul class="text-xs text-primary-white/70 space-y-2 hidden" data-lang="en">
+                            <li class="flex items-center gap-2">
+                                <div class="w-1.5 h-1.5 bg-white/60 rounded-full"></div>
+                                Meta & Facebook Ads
+                            </li>
+                            <li class="flex items-center gap-2">
+                                <div class="w-1.5 h-1.5 bg-white/60 rounded-full"></div>
+                                TikTok & Instagram Marketing
+                            </li>
+                            <li class="flex items-center gap-2">
+                                <div class="w-1.5 h-1.5 bg-white/60 rounded-full"></div>
+                                Google Ads & SEO
+                            </li>
+                        </ul>
+                    </div>
                 </div>
                 
             </div>
             
-            <div class="group bg-white/10 border border-white/20 rounded-lg p-8 hover:border-white/40 transition-all duration-300">
+            <div class="group glass-effect border border-white/20 rounded-lg p-8 hover:border-white/40 hover-lift transition-all duration-300 hover-scale">
                 
                 <div class="mb-8 h-32 flex items-center justify-center">
-                    <svg class="w-24 h-24 text-white/60 group-hover:text-white/80 transition-colors duration-300" fill="none" stroke="currentColor" viewBox="0 0 120 120" stroke-width="1" xmlns="http://www.w3.org/2000/svg">
+                    <svg class="w-24 h-24 text-white/60 group-hover:text-white/80 transition-colors duration-300 hover-rotate" fill="none" stroke="currentColor" viewBox="0 0 120 120" stroke-width="1" xmlns="http://www.w3.org/2000/svg">
                         <line x1="25" y1="25" x2="25" y2="85" stroke="currentColor" stroke-width="1"/>
                         <line x1="25" y1="85" x2="95" y2="85" stroke="currentColor" stroke-width="1"/>
                         
@@ -77,19 +165,81 @@
                 </div>
                 
                 <div class="space-y-4">
-                    <h3 class="text-xl md:text-2xl font-light tracking-tight">Creative Production</h3>
-                    <p class="text-sm text-primary-white/80 font-light leading-relaxed">
+                    <h3 class="text-xl md:text-2xl font-light tracking-tight text-shadow" data-lang="id">Shopee Ads</h3>
+                    <h3 class="text-xl md:text-2xl font-light tracking-tight text-shadow hidden" data-lang="en">Creative Production</h3>
+                    <p class="text-sm text-primary-white/80 font-light leading-relaxed" data-lang="id">
+                        Iklan Shopee yang strategis untuk meningkatkan visibility produk dan penjualan di marketplace terbesar Indonesia dengan ROI yang optimal.
+                    </p>
+                    <p class="text-sm text-primary-white/80 font-light leading-relaxed hidden" data-lang="en">
                         Award-winning creative content from concept to execution, including video production, photography, and graphic design that captures attention.
                     </p>
+                    <div class="pt-4 border-t border-white/10">
+                        <ul class="text-xs text-primary-white/70 space-y-2" data-lang="id">
+                            <li class="flex items-center gap-2">
+                                <div class="w-1.5 h-1.5 bg-white/60 rounded-full"></div>
+                                Product Listing Optimization
+                            </li>
+                            <li class="flex items-center gap-2">
+                                <div class="w-1.5 h-1.5 bg-white/60 rounded-full"></div>
+                                Shop Performance Monitoring
+                            </li>
+                            <li class="flex items-center gap-2">
+                                <div class="w-1.5 h-1.5 bg-white/60 rounded-full"></div>
+                                Campaign Scaling & Testing
+                            </li>
+                        </ul>
+                        <ul class="text-xs text-primary-white/70 space-y-2 hidden" data-lang="en">
+                            <li class="flex items-center gap-2">
+                                <div class="w-1.5 h-1.5 bg-white/60 rounded-full"></div>
+                                Video Production & Editing
+                            </li>
+                            <li class="flex items-center gap-2">
+                                <div class="w-1.5 h-1.5 bg-white/60 rounded-full"></div>
+                                Graphic Design & Branding
+                            </li>
+                            <li class="flex items-center gap-2">
+                                <div class="w-1.5 h-1.5 bg-white/60 rounded-full"></div>
+                                Photography & Visual Content
+                            </li>
+                        </ul>
+                    </div>
                 </div>
                 
             </div>
             
         </div>
         
+                
+                <div class="relative">
+                    <div class="bg-white/5 backdrop-blur-sm rounded-2xl p-8 border border-white/20">
+                        <h4 class="text-xl font-light text-white mb-6">Our Process</h4>
+                        <div class="space-y-4">
+                            <div class="flex items-center gap-4">
+                                <div class="w-8 h-8 bg-primary-blue rounded-full flex items-center justify-center text-sm font-medium">1</div>
+                                <span class="text-primary-white/80">Strategy & Planning</span>
+                            </div>
+                            <div class="flex items-center gap-4">
+                                <div class="w-8 h-8 bg-primary-blue rounded-full flex items-center justify-center text-sm font-medium">2</div>
+                                <span class="text-primary-white/80">Creative Development</span>
+                            </div>
+                            <div class="flex items-center gap-4">
+                                <div class="w-8 h-8 bg-primary-blue rounded-full flex items-center justify-center text-sm font-medium">3</div>
+                                <span class="text-primary-white/80">Campaign Launch</span>
+                            </div>
+                            <div class="flex items-center gap-4">
+                                <div class="w-8 h-8 bg-primary-blue rounded-full flex items-center justify-center text-sm font-medium">4</div>
+                                <span class="text-primary-white/80">Optimization & Growth</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
         <div class="text-center mt-16">
-            <a href="#contact-section" class="inline-flex items-center gap-2 px-8 py-4 bg-white text-primary-blue text-base font-medium rounded-lg hover:bg-gray-50 transition-all duration-300 shadow-lg hover:shadow-xl">
-                <span>Start Your Free Consultation</span>
+            <a href="#contact-section" class="inline-flex items-center gap-2 px-8 py-4 bg-white text-primary-blue text-base font-medium rounded-lg hover:bg-gray-50 transition-all duration-300 shadow-lg hover:shadow-xl hover-lift magnetic-hover neon-glow-hover">
+                <span data-lang="id">DAPATKAN KONSULTASI GRATIS</span>
+                <span data-lang="en" class="hidden">Start Your Free Consultation</span>
                 <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"/>
                 </svg>
